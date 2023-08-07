@@ -18,7 +18,7 @@ jobs:
           git config user.name "Jorge Ruvalcaba"
           git config user.email "jorgeruvalcabav@gmail.com"
           git config alias.commit "commit --allow-empty-message"
-          git commit
+          git commit -m ""
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
