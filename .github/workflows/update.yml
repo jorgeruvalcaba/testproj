@@ -1,23 +1,23 @@
-name: update
+# name: update
 
-on:
-  schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
+# on:
+#   schedule:
+#     - cron: '0 */6 * * *'
+#   workflow_dispatch:
 
-jobs:
-  update:
-    name: Update
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.WORKFLOW_GIT_ACCESS_TOKEN }}
+# jobs:
+#   update:
+#     name: Update
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
+#         with:
+#           token: ${{ secrets.WORKFLOW_GIT_ACCESS_TOKEN }}
 
-      - name: Make changes
-        run: |
-          git config user.name "Jorge Ruvalcaba"
-          git config user.email "jorgeruvalcabav@gmail.com"
-          git commit --allow-empty --allow-empty-message -m ""
-          git push
+#       - name: Make changes
+#         run: |
+#           git config user.name "Jorge Ruvalcaba"
+#           git config user.email "jorgeruvalcabav@gmail.com"
+#           git commit --allow-empty --allow-empty-message -m ""
+#           git push
